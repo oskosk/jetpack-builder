@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#docker run  --rm -it oskosk/jetpack-builder ls
+: ${JETPACK?"You need to set the env variable \$JETPACK to your local Jetpack directory"} && docker run  --rm -it \
+	-v "$JETPACK":/jetpack \
+	-w /jetpack \
+       	--name jetpack-build-alpha \
+	jetpack-builder:alpha \
+	bash -c "$1"
+

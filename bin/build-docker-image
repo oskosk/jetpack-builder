@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker build -t jetpack-builder:alpha --rm -f Dockerfile .

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker run  --rm -it  --name jetpack-build-alpha jetpack-builder:alpha ls
+
